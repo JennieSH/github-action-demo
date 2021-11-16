@@ -18,7 +18,8 @@
       "eslint --fix"
     ],
     "*.{html,scss,css,vue}": [
-      "prettier --write"
+      "prettier --write",
+      "stylelint --fix"
     ]
   },
   "dependencies": {
