@@ -13,15 +13,6 @@
     "lint": "yarn lint:js && yarn lint:style",
     "test": "jest"
   },
-  "lint-staged": {
-    "*.{ts,js,vue}": [
-      "eslint --fix"
-    ],
-    "*.{html,scss,css,vue}": [
-      "prettier --write",
-      "stylelint --fix"
-    ]
-  },
   "dependencies": {
     "core-js": "^3.15.1",
     "nuxt": "^2.15.7"
