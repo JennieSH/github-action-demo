@@ -1,5 +1,5 @@
 # This is a basic workflow to help you get started with Actions
-name: Test
+name: Deploy
 
 on:
   push:
@@ -19,11 +19,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Use Node.js
+      - name: Setup node env
         uses: actions/setup-node@v2
 
       - name: Install dependencies With Yarn
         run: yarn --frozen-lockfile
 
       - name: Jest run
+        id: test
         run: yarn test
+
+      - name: Generate Static Site
+        run: yarn generate
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: dir # The folder the action should deploy.
