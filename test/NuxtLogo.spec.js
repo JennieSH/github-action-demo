@@ -3,7 +3,7 @@
 
 describe('NuxtLogo', () => {
   test('is a Vue instance', () => {
-const test = true;
+const test = false;
     expect(test).toBeTruthy()
   })
 })
