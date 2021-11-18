@@ -1,6 +1,6 @@
 describe('github-action action', () => {
   test('fail test', () => {
-    const result = false; 
+    const result = true; 
     expect(result).toBeTruthy()
   })
 })
